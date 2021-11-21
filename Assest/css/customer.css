@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body,
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-image: url("../img/addCusBack.jpg");*/
+    /*background: #4f5050;*/
+    /*background-image: linear-gradient(90deg, rgb(61,58,58) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(135deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),linear-gradient(90deg, rgb(61,58,58),rgb(61,58,58));*/
+
+}
+.topBar{
+    position: absolute;
+    top: 0;
+    background: #4f5050;
+    width: 100vw;
+    height: 58px;
+}
+
+.form-group input{
+    color: white;
+}
+.loginPanalFormMain{
+
+    position: relative;
+    background-image: url("../img/addCusBack2.jpg");
+    bottom: 42px;
+    width: 100vw;
+    height: 100vh;
+}
+.logMainPhoto{
+    position: relative;
+    z-index: -111;
+}
+.loginPanel {
+    z-index: 100;
+    position: relative;
+    margin-left: 269px;
+    margin-top: 0px;
+    width: 67vw;
+    top: 52px;
+}
+.loginPanal{
+
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.8;
+    z-index: 1;
+
+}
+
+#loginForm{
+    position: relative;
+    z-index: 2;
+    color: white;
+    border: white 3px groove;
+    border-radius: 50px;
+    padding:  20px 20px 20px 20px;
+
+
+}
+
+#btnLogin2{
+    margin-left: 0px;
+    align-items: center;
+}
+
+#btnCreateAccount2:hover{
+    color: cornflowerblue;
+    text-decoration: underline cornflowerblue;
+}
+
+hr{
+    background-color: white;
+}
+
+.col-lg-3 label{
+    font-family:sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+form{
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-lg-3 input{
+
+    background-color: transparent;
+}
+
+.col-lg-3::selection{
+    background-color: transparent;
+}
+
+#frmCreateAccount label{
+    color: white;
+}
+
+#frmCreateAccount input{
+    background-color: transparent;
+    color: white;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-top: 13px;
+    margin-bottom: 22px;
+    margin-left: -3px;
+}
+.Create-Acc-img{
+    margin-left: 17px;
+    margin-top: 62px;
+    opacity: 1;
+    /* height: 198px; */
+    width: 344px;
+    height: 27em;
+    border-radius: 13px;
+}

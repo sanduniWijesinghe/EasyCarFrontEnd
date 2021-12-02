@@ -6,6 +6,7 @@ html{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: black;
     /*background-image: url("../img/addCusBack.jpg");*/
     /*background: #4f5050;*/
     /*background-image: linear-gradient(90deg, rgb(61,58,58) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(135deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),linear-gradient(90deg, rgb(61,58,58),rgb(61,58,58));*/
@@ -14,7 +15,7 @@ html{
 .topBar{
     position: absolute;
     top: 0;
-    background: #4f5050;
+    background: #2E3131 ;
     width: 100vw;
     height: 58px;
 }
@@ -25,7 +26,7 @@ html{
 .loginPanalFormMain{
 
     position: relative;
-    background-image: url("../img/addCusBack2.jpg");
+   // background-image: url("../img/addCusBack2.jpg");
     bottom: 42px;
     width: 100vw;
     height: 100vh;
@@ -68,15 +69,16 @@ html{
 #btnLogin2{
     margin-left: 0px;
     align-items: center;
+
 }
 
 #btnCreateAccount2:hover{
-    color: cornflowerblue;
-    text-decoration: underline cornflowerblue;
+    color: #EEF725 ;
+    text-decoration: underline #EEF725 ;
 }
 
 hr{
-    background-color: white;
+    background-color: black;
 }
 
 .col-lg-3 label{

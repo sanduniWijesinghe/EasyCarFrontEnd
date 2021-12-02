@@ -10,16 +10,16 @@
 </head>
 <body>
 <div class="topBar">
-<h3 style="color: white;position: relative; top: 11px;left: 33px;">Easy Car Rent</h3>
+<h3 style="color: white;position: relative; top: 11px;left: 33px;">Stitch-Line</h3>
 </div>
 
 <section class="loginPanalFormMain">
-<!--    <img class="logMainPhoto" src="Assest/img/addCusBack2.jpg" alt="">-->
+
 <section class="loginPanel" id="secCreateAccount">
     <div class="container" style="margin-top: 100px;border: white 3px solid;border-radius: 12px;">
         <div class="row">
             <div class="col-7">
-                <h1 style="color: white;    font-size: 31px;">Create Account</h1>
+                <h1 style="color: white;    font-size: 31px;">Registration</h1>
                 <form id="frmCreateAccount">
                     <div class="form-row">
                         <div class="form-group col-md-5">
@@ -27,48 +27,38 @@
                             <input class="form-control" id="txtCreateAccountUserName" type="text">
                         </div>
                         <div class="form-group col-md-5" style="margin-left: 17px;">
-                            <label for="txtCreateAccountEmail">Email</label>
-                            <input class="form-control" id="txtCreateAccountEmail" type="email">
-                        </div>
-
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="txtCreateAccountNIC">NIC Number</label>
-                        <input class="form-control" id="txtCreateAccountNIC" type="text">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="txtCreateAccountAddress">Address</label>
-                        <input class="form-control" id="txtCreateAccountAddress" type="text">
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
                             <label for="txtCreateAccountPassword">Password</label>
-                            <input class="form-control" id="txtCreateAccountPassword" type="password">
+                            <input class="form-control" id="txtCreateAccountPassword" type="email">
                         </div>
+
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-5">
-                            <div class="form-group">
-                                <label for="inputNICImageCreateAccount"> Image Of Your NIC</label>
-                                <input class="form-control-file" id="inputNICImageCreateAccount" type="file">
-                                <input class="form-control" id="inputNICImageCreateAccountName" style="margin-top: 10px"
-                                       type="text">
-                            </div>
-                        </div>
-                        <div class="form-group col-md-5"style="margin-left: 17px;">
-                            <div class="form-group">
-                                <label for="inputLICImageCreateAccount"> Image Of Your Driving License</label>
-                                <input class="form-control-file" id="inputLICImageCreateAccount" type="file">
-                                <input class="form-control" id="txtCreateAccountDriving" style="margin-top: 10px"
-                                       type="text">
-                            </div>
-                        </div>
+                    <div class="form-group col-md-6">
+                        <label for="txtCreateAccountName">Name</label>
+                        <input class="form-control" id="txtCreateAccountName" type="text">
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="txtCreateAccountMobile">Mobile Number</label>
+                        <input class="form-control" id="txtCreateAccountMobile" type="text">
+                    </div>
+
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="txtCreateAccountContact"> Contact Number</label>
-                            <input class="form-control" id="txtCreateAccountContact" type="text">
+                            <label for="txtCreateAccountDOB">Date of Birth</label>
+                            <input class="form-control" id="txtCreateAccountDOB" type="password">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="txtCreateAccountGender">Gender</label>
+                            <input class="form-control" id="txtCreateAccountGender" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="txtCreateAccountLanguage">Language</label>
+                            <input class="form-control" id="txtCreateAccountLanguage" type="text">
                         </div>
                     </div>
 
@@ -80,7 +70,7 @@
             </div>
             <div class="col-4">
 
-                <img class="Create-Acc-img"  alt="" height="auto" src="Assest/img/frontLight.jpg" width="287px">
+                <img class="Create-Acc-img"  alt="" height="auto" src="Assest/img/s11.gif" width="287px">
             </div>
         </div>
     </div>
@@ -129,94 +119,41 @@
 
         console.log("helloo");
 
-        let customerName = $('#txtCreateAccountUserName').val();
-        let customerAddress = $('#txtCreateAccountAddress').val();
-        let email = $('#txtCreateAccountEmail').val();
+        let customerUserName = $('#txtCreateAccountUserName').val();
         let customerPassword = $('#txtCreateAccountPassword').val();
+        let customerName = $('#txtCreateAccountName').val();
+        let customerMobile = $('#txtCreateAccountMobile').val();
+        let customerDOB = $('#txtCreateAccountDOB').val();
+        let customerGender = $('#txtCreateAccountGender').val();
+        let customerLanguage = $('#txtCreateAccountLanguage').val();
 
-        let NICNumber = $('#txtCreateAccountNIC').val();
-        let LICNumber = $('#txtCreateAccountDriving').val();
-        let contact = $('#txtCreateAccountContact').val();
 
-        // let LICImage = $('#inputLICImageCreateAccount').val();
-        // let NICImage = $('#inputNICImageCreateAccount').val();
-
-        if ($('#inputNICImageCreateAccount').get(0).files.length > 0 && $('#inputLICImageCreateAccount').get(0).files.length >0){
-
-            // Get Customer NIC
-            let customerNicImage = $('#inputNICImageCreateAccount')[0].files[0];
-            let customerNicImageName =  "NIC Image"
-
-            // Get Customer Liscene
-            let customerLicenseImg = $('#inputLICImageCreateAccount')[0].files[0];
-            let customerLicenseImgName = "License Image"
-
-            // Add customre
+        // Add customer----------------
 
             let customerObject ={
-                "cusNicID": NICNumber,
-                "name": customerName,
-                "address": customerAddress,
-                "email": email,
+                "username": customerUserName,
                 "password": customerPassword,
-                "nicImage": customerNicImageName,
-                "licImage": customerLicenseImgName,
-                "licNo": LICNumber,
-                "contact": contact
-            }
-            addUser(customerObject,customerNicImage,customerNicImageName,customerLicenseImg,customerLicenseImgName)
-        }
-
-
-    })
-
-    function addUser(customerObject,customerNicImage,customerNicImageName,customerLicenseImg,customerLicenseImgName) {
-
-        $.ajax({
-                 method: "post",
-                url: "http://localhost:8080/EasyCarBackEnd_war_exploded/customer",
-                contentType: "application/json",
-                dataType: 'json',
-                async: true,
-                data: JSON.stringify(customerObject),
-            success:function (res) {
-                        alert("Account Created !")
-                window.location.href = "index.html";
-                     // upload user nic image
-                uploadCustomerImages('/uplodedImg',customerNicImage,customerNicImageName)
-                uploadCustomerImages('/uplodedImg',customerLicenseImg,customerLicenseImgName)
-            }
-        })
-    }
-
-    function  uploadCustomerImages(path,customerNicImage,customerNicImageName) {
-
-        let imageFile = new FormData();
-        imageFile.append("image",customerNicImage,customerNicImageName);
-
-        $.ajax({
-            url:"http://localhost:8080/EasyCarBackEnd_war_exploded/customer" +path,
-            method:'post',
-            async:true,
-            processData: false,
-            contentType:false,
-            data: imageFile,
-            success:function (res) {
+                "name": customerName,
+                "mobile": customerMobile,
+                "dob": customerDOB,
+                "gender": customerGender,
+                "language": customerLanguage,
 
             }
-        })
-    }
+
+
+
+
 
     function clearAllTxt() {
-        let customerName = $('#txtCreateAccountUserName').val(" ");
-        let customerAddress = $('#txtCreateAccountAddress').val(" ");
-        let email = $('#txtCreateAccountEmail').val(" ");
-        let customerPassword = $('#txtCreateAccountPassword').val(" ");
-        let NICImage = $('#inputNICImageCreateAccount').val(" ");
-        let NICNumber = $('#txtCreateAccountNIC').val(" ");
-        let LICImage = $('#inputLICImageCreateAccount').val(" ");
-        let LICNumber = $('#txtCreateAccountDriving').val(" ");
-        let contact = $('#txtCreateAccountContact').val(" ");
+        let customerUserName = $('#txtCreateAccountUserName').val();
+        let customerPassword = $('#txtCreateAccountPassword').val();
+        let customerName = $('#txtCreateAccountName').val();
+        let customerMobile = $('#txtCreateAccountMobile').val();
+        let customerDOB = $('#txtCreateAccountDOB').val();
+        let customerGender = $('#txtCreateAccountGender').val();
+        let customerLanguage = $('#txtCreateAccountLanguage').val();
+
     }
 
 
